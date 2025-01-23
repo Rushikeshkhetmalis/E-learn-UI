@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>E-Learning Platform</title>
+  <link rel="stylesheet" href="task4.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <h1>E-Learn</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
+      <li><a href="javascript:void(0)" onclick="showPage('courses')">Courses</a></li>
+      <li><a href="javascript:void(0)" onclick="showPage('about')">About</a></li>
+      <li><a href="javascript:void(0)" onclick="showPage('contact')">Contact</a></li>
+      <li><a href="javascript:void(0)" onclick="showPage('login')">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="page">
+    <div class="hero-content">
+      <h2>Welcome to E-Learn</h2>
+
+      <p>Your gateway to online learning and skill development</p>
+      <br><br>
+      <button onclick="showPage('courses')">Explore Courses</button>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="page">
+    <h2>Our Courses</h2>
+    <div class="course-list">
+      <!-- Dynamically generated course cards will go here -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="page">
+    <h2>About Us</h2>
+    <br><br>
+    <p>We are a team dedicated to making learning accessible for everyone.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="page">
+    <h2>Contact Us</h2>
+    <form id="contact-form" onsubmit="validateContactForm(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="form-feedback" class="feedback"></p>
+  </section>
+
+  <!-- Login Section -->
+  <section id="login" class="page">
+    <h2>Login</h2>
+    <form id="login-form" onsubmit="validateLoginForm(event)">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p id="login-feedback" class="feedback"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 E-Learn. All Rights Reserved.</p>
+  </footer>
+
+  <script src="task4.js"></script>
+</body>
+</html>
